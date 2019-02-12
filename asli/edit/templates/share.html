@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SHARE PAGE</title>
+</head>
+<body>
+	{% for i in p%}
+	<img src ='../media/{{i.pic}}'>
+        {%csrf_token%}
+	
+	{%endfor%}
+        
+
+</body>
+</html> 

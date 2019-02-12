@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+        <body>
+	                <form action="/media/" method="POST" enctype='multipart/form_data'>
+                                {% csrf_token%}
+                                {{form.as_p}}
+                                <button type='submit'> show</button>
+                        </form>
+
+                        <form action="/bw/" method="POST" enctype='multipart/form_data'>
+                                {% csrf_token%}
+                                {{form.as_p}}
+                                <button type='submit'> black and white</button>
+
+
+                        </form>
+                        <form action="/rotate/" method="POST" enctype='multipart/form_date'>
+                                {% csrf_token%}
+
+                                <button type='submit'> rotate </button>
+                                <input type="number" name="degree" min=0 max=360 />
+
+                        </form>
+                        <form action="/resize/" method="POST" enctype='multipart/form_date'>
+                                {% csrf_token%}
+
+                                <button type='submit'> resize </button>
+                                <input type="number" name="x"/>
+                                <input type="number" name="y"/>
+
+
+
+                        </form>
+                        <form action="/crop/" method="POST" enctype='multipart/form_date'>
+                                {% csrf_token%}
+
+                                <button type='submit'> crop </button>
+                                <input type="number" name="l"/>
+                                <input type="number" name="u"/>
+                                <input type="number" name="r"/>
+                                <input type="number" name="d"/>
+
+
+
+                        </form>
+                        <form action="/share/" method="POST" enctype='multipart/form_data'>
+                                {% csrf_token%}
+                                {{form.as_p}}
+                                <button type='submit'> share</button>
+
+                        </form>
+
+
+				
+	
+	</body>
+        </html>
+
+
